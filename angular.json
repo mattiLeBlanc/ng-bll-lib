@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "bll-lib": {
+      "root": "projects/bll-lib",
+      "sourceRoot": "projects/bll-lib/src",
+      "projectType": "library",
+      "prefix": "bll",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/bll-lib/tsconfig.lib.json",
+            "project": "projects/bll-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/bll-lib/src/test.ts",
+            "tsConfig": "projects/bll-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/bll-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/bll-lib/tsconfig.lib.json",
+              "projects/bll-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "bll-app"

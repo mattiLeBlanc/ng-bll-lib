@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "bll-lib": [
+        "dist/bll-lib"
+      ],
+      "bll-lib/*": [
+        "dist/bll-lib/*"
+      ]
+    }
   }
 }

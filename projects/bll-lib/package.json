@@ -1,0 +1,9 @@
+{
+  "name": "bll-lib",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^7.1.0",
+    "@angular/core": "^7.1.0",
+    "ui-lib": "file:../ui-lib/dist/ui-lib/ui-lib-0.0.1.tgz"
+  }
+}
